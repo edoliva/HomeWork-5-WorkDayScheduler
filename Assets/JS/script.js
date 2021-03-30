@@ -3,53 +3,53 @@ var timeDisplayEl = $('#time-display');
 
 // handle displaying the time
 function displayTime() {
-    var rightNow = moment().format('MMM DD, YYYY a');
+    var rightNow = moment().format('MMM DD, YYYY h:m a');
     timeDisplayEl.text(rightNow);
   }
 setInterval(displayTime, 1000);
 
 // row 1
-for (let i = 0; i <= 7; i++) {
-var localtaski = localStorage.getItem("task"+i);
-var submitButtoni = document.querySelector("#submit-button"+i);
-var doneButtoni = document.querySelector("#done-button"+i); 
-var lastTaskSpani = document.querySelector("#taskdisplay"+i);
-var taski = document.querySelector("#task"+i);
+var localtask0 = localStorage.getItem("task0");
+var submitButton0 = document.querySelector("#submit-button0");
+var doneButton0 = document.querySelector("#done-button0"); 
+var lastTaskSpan0 = document.querySelector("#taskdisplay0");
+var task0 = document.querySelector("#task0");
+var row0 = document.querySelector("#row0"); 
 
-console.log(localtaski);
-if (localtaski != null) {
-  taski.setAttribute("style", "display: none;");
-  lastTaskSpani.setAttribute("style", "display: inline-block;");
-  lastTaskSpani.textContent = localtaski;
-  submitButtoni.setAttribute("style", "display: none;");
-  doneButtoni.setAttribute("style", "display: inline-block;");
-} else {doneButtoni.setAttribute("style", "display: none;");}
+console.log(localtask0);
+if (localtask0 != null) {
+  task0.setAttribute("style", "display: none;");
+  lastTaskSpan0.setAttribute("style", "display: inline-block;");
+  lastTaskSpan0.textContent = localtask0;
+  submitButton0.setAttribute("style", "display: none;");
+  doneButton0.setAttribute("style", "display: inline-block;");
+} else {doneButton0.setAttribute("style", "display: none;");}
    
-submitButtoni.addEventListener("click", function(event) {  
-  var taski = document.querySelector("#task"+i).value.trim();
-  if (taski === "") {
+submitButton0.addEventListener("click", function(event) {  
+  var task0 = document.querySelector("#task0").value.trim();
+  if (task0 === "") {
     alert("Enter SOMETHING!");
     return;
   }
-  localStorage.setItem("task"+i, taski);
-  lastTaskSpani.textContent = taski;
-  taski = document.querySelector("#task"+i);
-  taski.setAttribute("style", "display: none;");
-  lastTaskSpani.setAttribute("style", "display: inline-block;");
-  submitButtoni.setAttribute("style", "display: none;");
-  doneButtoni.setAttribute("style", "display: inline-block;");
+  localStorage.setItem("task0", task0);
+  lastTaskSpan0.textContent = task0;
+  task0 = document.querySelector("#task0");
+  task0.setAttribute("style", "display: none;");
+  lastTaskSpan0.setAttribute("style", "display: inline-block;");
+  submitButton0.setAttribute("style", "display: none;");
+  doneButton0.setAttribute("style", "display: inline-block;");
 });
 
-doneButtoni.addEventListener("click", function(event) {  
-  localStorage.removeItem("task"+i);
-  taski = document.querySelector("#task"+i);
-  taski.setAttribute("style", "display: inline-block;");
-  lastTaskSpani.setAttribute("style", "display: none;");
-  submitButtoni.setAttribute("style", "display: inline-block;");
-  doneButtoni.setAttribute("style", "display: none;");
+doneButton0.addEventListener("click", function(event) {  
+  localStorage.removeItem("task0");
+  task0 = document.querySelector("#task0");
+  task0.setAttribute("style", "display: inline-block;");
+  lastTaskSpan0.setAttribute("style", "display: none;");
+  submitButton0.setAttribute("style", "display: inline-block;");
+  doneButton0.setAttribute("style", "display: none;");
   location.reload()
 });
-};
+
 
 // row 2
 var localtask1 = localStorage.getItem("task1");
@@ -91,3 +91,40 @@ doneButton1.addEventListener("click", function(event) {
   doneButton1.setAttribute("style", "display: none;");
   location.reload()
 });
+
+// if (hr >= startTime+1) {
+//   row1.setAttribute("style", "background-color: red;");
+// } else {row1.setAttribute("style", "background-color: green;");} 
+
+
+
+
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+var hr = (new Date()).getHours(); 
+var startTime = 9;
+
+for (var i = 0; i <= 8; i++) {
+  var rowi = document.querySelector("#row"+i); 
+  if (hr >= startTime+i && hr < startTime+i+1) {rowi.setAttribute("style", "background-color: red;");}
+  else if  (hr < startTime+i+1) {rowi.setAttribute("style", "background-color: green;");} 
+  else {rowi.setAttribute("style", "background-color: grey;");}
+}
