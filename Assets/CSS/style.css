@@ -2,35 +2,17 @@ body {
     font-size: 16px;
     line-height: 1;
     font-family: "Roboto", sans-serif;
-    background-color: #eff5f8;
+    background-color: #1493d3;
     color: #001b44;
   }
   
-  textarea {
-    background: transparent;
-    border: none;
-    resize: none;
-    color: #000000;
-    border-left: 1px solid black;
-    padding: 10px;
-  }
-  
-  .jumbotron {
-    text-align: center;
-    background-color: transparent;
-    color: black;
-    border-radius: 0;
-    border-bottom: 10px solid black;
-  }
-  
-  .description {
-    white-space: pre-wrap;
-  }
-  
-  .time-block {
-    text-align: center;
-    border-radius: 15px;
-  }
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
 
 .row {
   text-align: justify;
@@ -48,19 +30,19 @@ body {
 }
 
 .box1 {
-    border: 1px solid #DDD;
-    width: 15%;
-    height: 80px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-
+  border: 1px solid rgb(7, 0, 0);
+  width: 15%;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: x-large;
 }
 .box2 {
-  border: 1px solid #DDD;
+  border: 1px solid rgb(7, 0, 0);
   width: 70%;
   height: 80px;
   margin: 0 auto;
@@ -69,9 +51,10 @@ body {
   display: flex;
   justify-content: center;
   align-items:center;
+  font-size: 20px;
 }
 .box3 {
-  border: 1px solid #DDD;
+  border: 1px solid rgb(7, 0, 0);
   width: 10%;
   height: 80px;
   margin: 0 auto;
@@ -87,87 +70,37 @@ input {
   height: 75px;
 }
 
-/* #task0 {
-  display: inline-flex;
-}
-#task0display{
-  display: hidden;
-}
-#submit-button0 {
-  display: inline-flex;
-}
-#done-button0 {
-  display: hidden;
+button {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+  height: 30px;
+  width: fit-content;
 }
 
-#task1 {
-  display: inline-flex;
+button i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
-#task1display{
-  display: hidden;
-}
-#submit-button1 {
-  display: inline-flex;
-}
-#done-button1 {
-  display: hidden;
-} */
 
-  
-  .hour {
-    background-color: #ffffff;
-    color: #000000;
-    border-top: 1px dashed #000000;
-  }
-  
-  .past {
-    background-color: #d3d3d3;
-    color: white;
-  }
-  
-  .present {
-    background-color: #ff6961;
-    color: white;
-  }
-  
-  .future {
-    background-color: #77dd77;
-    color: white;
-  }
-  
-  .saveBtn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06aed5;
-    color: white;
-  }
-  
-  .saveBtn i:hover {
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* Style the header */
 .header {
-  padding: 10px 16px;
+  padding: 10px;
   background: #555;
   color: #f1f1f1;
 }
 
-/* Page content */
 .content {
   padding: 16px;
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 95%
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 102px;
 }
