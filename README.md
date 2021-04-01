@@ -27,19 +27,24 @@ Clone or download this repository on GitHub then open "edoliva.github.io/HomeWor
    - The middle section of each row is an open text box for the user to type in the task. Only when they hit SAVE will the task save to local storage. The SAVE button will switch to "display:none" and the DONE button will switch to "display:inline-block". The input box will also "display:none" and the locally stored task will "display:inline-block".
    - When the user clicks the DONE button, all of these styling displays will reverse so the user is only presented with the SAVE button and the input box.
  
-Screenshots:
+## Screenshots
+
+Header and Time Bar Stick
 -
-![Header](Assets/Images/InfoBox.png)
+![Header](Assets/Images/Header.png)
 -
-![TimeBoxStick](Assets/Images/QuizQuestionBox.png)
+![TimeBoxStick](Assets/Images/TimeBoxStick.png)
 -
-![BlankInput](Assets/Images/FinalScoreBox.png)
+Color Rows and Button Function
+![BlankInput](Assets/Images/BlankInput.png)
 -
-![TextInInput](Assets/Images/HighScoreBox.png)
+![TextInInput](Assets/Images/TextInInput.png)
 -
-If user leaves answer blank:
+![DoneButton](Assets/Images/DoneButton.png)
 -
-![NoTaskError](Assets/Images/NoAnswerError.png)
+If user leaves task blank, but clicks SAVE button:
+-
+![NoTaskError](Assets/Images/NoTaskError.png)
 -
  
 ## Credits
