@@ -1,6 +1,6 @@
-# HomeWork-5-WorkDayScheduler
+# Student Work Day Scheduler
  
-## HW 5 Description
+## Description
 This webpage was created so a user could enter in a task they would like completed at some hour of the work day. Color prompts allow the user to better manage their tasks so they know what is past-due. 
 
 They can save the task, by clicking the SAVE button, and it will store locally so it shows up each time they open the webpage.
@@ -15,7 +15,7 @@ Once the task it done, they can clear it from local storage but clicking the DON
 - [Credits](#credits)
 - [License](#license)
 ## Installation
-Clone or download this repository on GitHub then open "edoliva.github.io/HomeWork-5-WorkDayScheduler/index.html" in a browser.  
+Clone or download this repository on GitHub then open "edoliva.github.io/StudentScheduler/index.html" in a browser.  
 ## Criteria
 - The user must enter some text in the task box or they will receive an error when they try press the SAVE button for that time slot.
 - The user can leave a time slot open without receiving an error alert.   
